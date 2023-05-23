@@ -1,7 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
-const QUICKNODE_API_KEY_URL = process.env.QUICKNODE_API_KEY_URL;
+const ALCHEMY_HTTP_URL = process.env.ALCHEMY_HTTP_URL;
 const SEPOLIA_PRIVATE_KEY = process.env.SEPOLIA_PRIVATE_KEY;
 
 
@@ -9,8 +9,8 @@ const SEPOLIA_PRIVATE_KEY = process.env.SEPOLIA_PRIVATE_KEY;
 module.exports = {
   solidity: "0.8.18",
   networks: {
-    sepolia: {
-      url: QUICKNODE_API_KEY_URL,
+    mumbai: {
+      url: ALCHEMY_HTTP_URL,
       accounts: [SEPOLIA_PRIVATE_KEY]
     }
   }
